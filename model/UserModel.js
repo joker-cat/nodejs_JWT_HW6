@@ -11,6 +11,19 @@ const [schema, options] = [
       required: [true, "信箱 未填寫"],
       select: false,
     },
+    password:{
+      type: String,
+      required: [true, "密碼 未填寫"],
+      select: false,
+    },
+    confirmPassword:{
+      type: String,
+      select: false,
+    },
+    sex:{
+      type: String,
+      enum:["male", "female"]
+    },
     photo: {
       type: String,
       default:
@@ -19,6 +32,7 @@ const [schema, options] = [
     createdAt: {
       type: Date,
       default: Date.now,
+      select: false,
     },
   },
   {

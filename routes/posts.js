@@ -1,10 +1,11 @@
 const express = require("express");
-const postRouter = express.Router();
 const { resSuccessWrite } = require("../module/resModule");
 const validateKey = require("../module/validateModule");
 const Post = require("../model/PostModel");
 const appError = require("../service/appError");
 const handErrorAsync = require("../service/handErrorAsync");
+const postRouter = express.Router();
+
 
 
 postRouter.get(`/posts`, handErrorAsync(async (req, res) => {

@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const logger = require("morgan");
+
 const postRouter = require("./routes/posts");
 const userRouter = require("./routes/users");
 const { resErrorProd, resErrorDev } = require("./service/nodeEnvError");
@@ -11,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 app.use(logger("dev"));
 app.use(postRouter);
-app.use(userRouter);
+app.use('/users', userRouter);
 app.all("*", (req, res) => {
   res.send(`找不到 ${req.originalUrl} 路徑`);
 });
@@ -39,8 +40,8 @@ const dbUrl = process.env.URL.replace("<password>", process.env.PASSWORD);
 const localUrl = process.env.LOCAL_URL;
 
 mongoose
-  // .connect(localUrl)
-  .connect(dbUrl)
+  .connect(localUrl)
+  // .connect(dbUrl)
   .then(() => console.log("資料庫連線成功"))
   .catch(() => console.error("資料庫連線失敗"));
 
