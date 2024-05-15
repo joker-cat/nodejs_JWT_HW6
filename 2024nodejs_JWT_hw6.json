@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "a33c0c60-9907-4b25-9879-0d7c01ffd3d7",
+		"name": "2024nodejs_JWT_hw6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29889308"
+	},
+	"item": [
+		{
+			"name": "local",
+			"item": [
+				{
+					"name": "userSign_up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"tomcat\",\r\n    \"email\":\"tomcat@gmail.com\",\r\n    \"password\":\"tomcat123456\",\r\n    \"confirmPassword\":\"tomcat123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/users/sign_up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"users",
+								"sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userSign_in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDQzNzc1MjU3ZTZhOWU1OTVjZTk0MSIsImlhdCI6MTcxNTc0NjY3NywiZXhwIjoxNzE2MzUxNDc3fQ.geBNZ_kBZBPg0EhzaINc9UnHrsSLDFw_DSHNBTVqz3",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"tomcat@gmail.com\",\r\n    \"password\":\"tomcat123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/users/sign_in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"users",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userUpdatePsd",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDQ0NmNiMmFlYzI0MmMwYzcxYWY2MSIsImlhdCI6MTcxNTc1MDY4NiwiZXhwIjoxNzE2MzU1NDg2fQ.28oCD1Qbh_p-k1FwsGWyOk1nx0EZKmDrPsd36kJ-CMY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"tomcat123456\",\r\n    \"confirmPassword\": \"tomcat123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/users/updatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"users",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userGetProfile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDQ0NmNiMmFlYzI0MmMwYzcxYWY2MSIsImlhdCI6MTcxNTc1MDY4NiwiZXhwIjoxNzE2MzU1NDg2fQ.28oCD1Qbh_p-k1FwsGWyOk1nx0EZKmDrPsd36kJ-CMY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3005/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userPatch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDQ0NmNiMmFlYzI0MmMwYzcxYWY2MSIsImlhdCI6MTcxNTc1MDY4NiwiZXhwIjoxNzE2MzU1NDg2fQ.28oCD1Qbh_p-k1FwsGWyOk1nx0EZKmDrPsd36kJ-CMY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"tommy123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "render",
+			"item": [
+				{
+					"name": "userSign_up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"tomcat\",\r\n    \"email\":\"tomcat@gmail.com\",\r\n    \"password\":\"tomcat123456\",\r\n    \"confirmPassword\":\"tomcat123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nodejs-jwt-hw6.onrender.com/users/sign_up",
+							"protocol": "https",
+							"host": [
+								"nodejs-jwt-hw6",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"users",
+								"sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userSign_in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDQzNzc1MjU3ZTZhOWU1OTVjZTk0MSIsImlhdCI6MTcxNTc0NjY3NywiZXhwIjoxNzE2MzUxNDc3fQ.geBNZ_kBZBPg0EhzaINc9UnHrsSLDFw_DSHNBTVqz3",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"tomcat@gmail.com\",\r\n    \"password\":\"tomcat123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nodejs-jwt-hw6.onrender.com/users/sign_in",
+							"protocol": "https",
+							"host": [
+								"nodejs-jwt-hw6",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"users",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userUpdatePsd",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDQ0NmNiMmFlYzI0MmMwYzcxYWY2MSIsImlhdCI6MTcxNTc1MDY4NiwiZXhwIjoxNzE2MzU1NDg2fQ.28oCD1Qbh_p-k1FwsGWyOk1nx0EZKmDrPsd36kJ-CMY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"tomcat123456\",\r\n    \"confirmPassword\": \"tomcat123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nodejs-jwt-hw6.onrender.com/users/updatePassword",
+							"protocol": "https",
+							"host": [
+								"nodejs-jwt-hw6",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"users",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userGetProfile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDQ0NmNiMmFlYzI0MmMwYzcxYWY2MSIsImlhdCI6MTcxNTc1MDY4NiwiZXhwIjoxNzE2MzU1NDg2fQ.28oCD1Qbh_p-k1FwsGWyOk1nx0EZKmDrPsd36kJ-CMY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://nodejs-jwt-hw6.onrender.com/users/profile",
+							"protocol": "https",
+							"host": [
+								"nodejs-jwt-hw6",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userPatch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDQ0NmNiMmFlYzI0MmMwYzcxYWY2MSIsImlhdCI6MTcxNTc1MDY4NiwiZXhwIjoxNzE2MzU1NDg2fQ.28oCD1Qbh_p-k1FwsGWyOk1nx0EZKmDrPsd36kJ-CMY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"tommy123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nodejs-jwt-hw6.onrender.com/users/profile",
+							"protocol": "https",
+							"host": [
+								"nodejs-jwt-hw6",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
